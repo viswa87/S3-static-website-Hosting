@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthCare Hospital Management System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #087f8c;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header p {
+            font-size: 14px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #087f8c;
+            margin-right: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #055c65;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #087f8c, #00a8b5);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Dashboard */
+        .container {
+            padding: 40px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #087f8c;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #087f8c;
+            margin-bottom: 12px;
+        }
+
+        .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .service h3 {
+            color: #087f8c;
+            margin-bottom: 10px;
+        }
+
+        /* Appointment */
+        .appointment {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .appointment input,
+        .appointment select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .appointment button {
+            width: 100%;
+            padding: 12px;
+            background: #087f8c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .appointment button:hover {
+            background: #055c65;
+        }
+
+        /* Contact */
+        .contact {
+            background: #087f8c;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            nav {
+                text-align: center;
+                padding: 15px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div>
+        <h1>🏥 HealthCare Hospital</h1>
+        <p>Hospital Management System</p>
+    </div>
+
+    <div>
+        <strong>Emergency: 108</strong>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#services">Services</a>
+    <a href="#appointment">Appointment</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+
+    <h2>Welcome to HealthCare Hospital</h2>
+
+    <p>
+        Quality Healthcare | Experienced Doctors | Modern Facilities
+    </p>
+
+</section>
+
+<!-- Dashboard -->
+<section class="container" id="dashboard">
+
+    <h2>Hospital Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>👨‍⚕️ Doctors</h3>
+            <div class="number">50</div>
+            <p>Available Doctors</p>
+        </div>
+
+        <div class="card">
+            <h3>👩‍⚕️ Patients</h3>
+            <div class="number">1250</div>
+            <p>Registered Patients</p>
+        </div>
+
+        <div class="card">
+            <h3>📅 Appointments</h3>
+            <div class="number">120</div>
+            <p>Today's Appointments</p>
+        </div>
+
+        <div class="card">
+            <h3>🛏️ Beds</h3>
+            <div class="number">85</div>
+            <p>Available Beds</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Services -->
+<section class="container" id="services">
+
+    <h2>Our Hospital Services</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <h3>🩺 General Medicine</h3>
+            <p>
+                Complete medical consultation and treatment
+                for common health problems.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>❤️ Cardiology</h3>
+            <p>
+                Advanced diagnosis and treatment for heart
+                related diseases.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>🦴 Orthopedics</h3>
+            <p>
+                Treatment for bones, joints and muscle related
+                conditions.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>🧪 Laboratory</h3>
+            <p>
+                Blood tests, urine tests and other diagnostic
+                laboratory services.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>💊 Pharmacy</h3>
+            <p>
+                Medicines and healthcare products available
+                at our hospital pharmacy.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>🚑 Emergency</h3>
+            <p>
+                24/7 emergency medical services for patients.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Appointment -->
+<section class="container" id="appointment">
+
+    <h2>Book an Appointment</h2>
+
+    <div class="appointment">
+
+        <form onsubmit="bookAppointment(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Patient Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            >
+
+            <select id="department" required>
+
+                <option value="">Select Department</option>
+                <option>General Medicine</option>
+                <option>Cardiology</option>
+                <option>Orthopedics</option>
+                <option>Neurology</option>
+                <option>Pediatrics</option>
+
+            </select>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <button type="submit">
+                Book Appointment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>📍 123 Main Road, Bengaluru, Karnataka</p>
+
+    <p>📞 Emergency: 108</p>
+
+    <p>☎️ Hospital: +91 98765 43210</p>
+
+    <p>📧 Email: info@healthcarehospital.com</p>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 HealthCare Hospital Management System
+    </p>
+
+    <p>
+        Hosted on AWS S3
+    </p>
+
+</footer>
+
+<script>
+
+function bookAppointment(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    let department =
+        document.getElementById("department").value;
+
+    let date =
+        document.getElementById("date").value;
+
+    alert(
+        "Appointment booked successfully!\n\n" +
+        "Patient: " + name + "\n" +
+        "Department: " + department + "\n" +
+        "Date: " + date
+    );
+
+}
+
+</script>
+
+</body>
+</html>
